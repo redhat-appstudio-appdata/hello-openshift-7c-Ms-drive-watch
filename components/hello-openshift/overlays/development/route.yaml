@@ -1,0 +1,20 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: hello-openshift
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: hello-openshift
+    app.kubernetes.io/part-of: hello-openshift
+  name: hello-openshift7i5d
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: hello-openshift
+    weight: null
+status: {}

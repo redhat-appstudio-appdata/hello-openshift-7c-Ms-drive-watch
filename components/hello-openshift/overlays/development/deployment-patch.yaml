@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hello-openshift
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/jdavis-se-jboss-tenant/hello-openshift/hello-openshift@sha256:1af8d6f339b564f2794849cef315989a40e09891b4a668df2af13fa473521345
+        name: my-java-quarkus
+        resources: {}
+status: {}
